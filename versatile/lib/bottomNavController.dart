@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:versatile/pages/home.dart';
 import 'package:versatile/pages/order.dart';
@@ -11,41 +12,53 @@ class Bottomnavcontroller extends StatefulWidget {
 }
 
 class _BottomnavcontrollerState extends State<Bottomnavcontroller> {
+  late List<Widget> pages;
+  late Home HomePages;
+  late Order order;
+  late Profile profile;
+  int currentTabIndex = 0;
+  @override
+  void initState() {
+    HomePages = Home();
+    order = Order();
+    profile = Profile();
+    pages = [HomePages, order, profile];
 
- int _currentIndex = 0;
-  final _pages = [
-   Home(),
-   Order(),
-   Profile(),
-   
-  ];
-
-
-
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.black,
-          elevation: 5,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.grey,
-          onTap: (value) {
-            setState(() {
-              _currentIndex = value;
-            });
-          },
-          currentIndex: _currentIndex,
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_bag_outlined), label: 'Order'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          ]),
-           body: _pages[_currentIndex],
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 65,
+        backgroundColor: Colors.white,
+        color: Colors.black,
+        onTap: ( int index) {
+          setState(() {
+            currentTabIndex = index;
+          });
+
+        },
 
 
+        
+        items: [
+        Icon(
+          Icons.home,
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.shopping_bag_outlined,
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.person_off_outlined,
+          color: Colors.white,
+        ),
 
+      ]),
+      body: pages[currentTabIndex],
     );
   }
 }
