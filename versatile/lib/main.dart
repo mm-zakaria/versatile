@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:versatile/bottomNavController.dart';
 import 'package:versatile/pages/home.dart';
 import 'package:versatile/pages/onbording.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: Bottomnavcontroller(),
     );
   }
 }

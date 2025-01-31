@@ -4,7 +4,7 @@ class Appwidget{
 
 static TextStyle boldText(){
 return  TextStyle(
-                  fontSize: 27.0,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.black);
 
