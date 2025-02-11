@@ -22,6 +22,16 @@ return TextStyle(
 
 
 }
+static TextStyle semiBold(){
+return TextStyle(
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black);
+
+
+
+
+}
 
 
 

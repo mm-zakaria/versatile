@@ -14,7 +14,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
     return Scaffold(
       backgroundColor: Color(0xFFfef5f1),
       body: Container(
-        padding: EdgeInsets.only(top: 50.0),
+        padding: EdgeInsets.only(top: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,6 +34,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
               Center(child: Image.asset("images/headphone2.png", height: 400)),
             ]),
             Expanded(
+            
               child: Container(
                 padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
                 decoration: BoxDecoration(
@@ -57,7 +58,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
                                 fontWeight: FontWeight.bold)),
                       ],
                     ),
-                    SizedBox(height: 25.0),
+                    SizedBox(height: 15.0),
                     Text(
                       "Details",
                       style: TextStyle(
@@ -66,7 +67,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
                           color: Colors.black),
                     ),
                     Text("This wired headphones provide a seamless audio experience with high-fidelity sound and zero latency, making them ideal for music lovers and gamers. Equipped with powerful dynamic drivers, they deliver deep bass, clear mids, and crisp highs for an immersive sound profile. The ergonomic over-ear design with padded ear cushions ensures comfort during long listening sessions. A durable, tangle-free cable enhances longevity while ensuring uninterrupted connectivity. The 3.5mm audio jack offers wide compatibility with smartphones, laptops, gaming consoles, and audio devices. With passive noise isolation, these headphones block out external noise, allowing you to enjoy pure, high-quality sound anywhere"),
-                        SizedBox(height: 70.0),
+                        SizedBox(height: 10.0),
                     Container(
                       padding: EdgeInsets.symmetric(vertical: 10.0),
                       decoration: BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.circular(10)),
