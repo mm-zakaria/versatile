@@ -4,6 +4,7 @@ import 'package:versatile/bottomNavController.dart';
 import 'package:versatile/pages/home.dart';
 import 'package:versatile/pages/login.dart';
 import 'package:versatile/pages/onbording.dart';
+import 'package:versatile/pages/products_details.dart';
 import 'package:versatile/pages/signup.dart';
 
 //import 'package:versatile/pages/signup.dart';
